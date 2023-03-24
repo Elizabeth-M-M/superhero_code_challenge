@@ -21,7 +21,7 @@ class PowersController < ApplicationController
   end
 
   def record_not_found
-    render json: {error:"Power was not found"}, status: :not_found
+    render json: {error:"Power not found"}, status: :not_found
   end
   def render_unprocessable_error(invalid)
     render json: {errors:invalid.record.errors.full_messages}, status: :unprocessable_entity
