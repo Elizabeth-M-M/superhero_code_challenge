@@ -11,6 +11,7 @@ class PowersController < ApplicationController
   end
   def update
     power= find_power
+    # byebug
     power.update!(params.permit(:name, :description))
     render json: power
   end
