@@ -70,7 +70,7 @@ To get started with this API, you need to follow the steps mentioned below and r
 3. Run the database migrations and seed the database using `rails db:migrate db:seed`
 4. Start the server using `rails server`
 
-You can test and use the endpoints for each model defined above by using `http://localhost:3000` and add the endpoints. You can use it in your project or use a program like Postman.
+You can test and use the endpoints for each model defined above by using `http://localhost:3000` and add the endpoints, except for the POST and PATCH commands. You can use it in your project or use a program like Postman to test all endpoints mentioned above.
 
 #### Conclusion
 This API provides basic functionality for managing heroes, powers, and hero powers. You can use this API as a starting point for building more complex applications that involve superheroes and their powers
