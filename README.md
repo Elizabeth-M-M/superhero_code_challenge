@@ -19,6 +19,7 @@ The relationships between the models are as follows:
 In other words, a Hero can have multiple powers, and a Power can be possessed by multiple heroes. The HeroPower model acts as a join table between the Hero and Power models, storing additional information about the strength of the power possessed by the hero.
 
 The relationship between the models can be visualized as follows:
+
 ![alt text](hero_powers.jpg "Restaurant_Pizza Model")
 
 ### Hero Model
@@ -32,12 +33,12 @@ The relationship between the models can be visualized as follows:
 The following endpoints are available for the Hero model:
 
 - GET `/heroes`: Returns a list of all heroes.
-- GET `/heroes/:id`: Returns details of a specific hero.
+- GET `/heroes/:id`: Returns details of a specific hero with their powers.
 
 ### Power Model
 ##### Attributes
 - name: string, required. The name of the power.
-- description: text, required. The description of the power.
+- description: string, required. The description of the power, not less than 20 characters long.
 - created_at: Timestamp when the Power was created (datetime)
 - updated_at: Timestamp when the Power was last updated (datetime)
 
@@ -50,7 +51,7 @@ The following endpoints are available for the Power model:
 
 ### HeroPower Model
 ##### Attributes
-- strength: integer, required. The strength of the hero power.
+- strength: string, required. The strength of the hero power, only in three values, Strong, Weak and Average.
 - hero_id: integer, required. The ID of the hero.
 - power_id: integer, required. The ID of the power.
 - created_at: Timestamp when the HeroPower was created (datetime)
@@ -59,7 +60,7 @@ The following endpoints are available for the Power model:
 ##### Endpoints
 The following endpoint is available for the HeroPower model:
 
-- POST `/hero_powers`: Creates a new hero power.
+- POST `/hero_powers`: Creates a new hero power and returns the hero with his/her powers.
 
 #### Getting Started
 To get started with this API, you need to follow the steps mentioned below and run on the command line:
